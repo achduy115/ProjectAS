@@ -1,0 +1,9 @@
+E:\Project_AS\ProjectAS\ProjectAS\bin\ProjectAS.dll.config
+E:\Project_AS\ProjectAS\ProjectAS\bin\ProjectAS.dll
+E:\Project_AS\ProjectAS\ProjectAS\bin\ProjectAS.pdb
+E:\Project_AS\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project_AS\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project_AS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csprojResolveAssemblyReference.cache
+E:\Project_AS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csproj.CoreCompileInputs.cache
+E:\Project_AS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.dll
+E:\Project_AS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.pdb
