@@ -7,3 +7,12 @@ C:\Users\Yuu\Desktop\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetC
 C:\Users\Yuu\Desktop\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Yuu\Desktop\ProjectAS\ProjectAS\obj\Debug\ProjectAS.dll
 C:\Users\Yuu\Desktop\ProjectAS\ProjectAS\obj\Debug\ProjectAS.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\ProjectAS.dll.config
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\ProjectAS.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\ProjectAS.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csproj.CoreCompileInputs.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.pdb

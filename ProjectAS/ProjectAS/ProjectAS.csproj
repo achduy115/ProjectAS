@@ -66,13 +66,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Style\User\Master\styleLJ.css" />
+    <Content Include="Content\Style\W3.css" />
     <Content Include="Fonts\quicksand\Quicksand-Bold.ttf" />
     <Content Include="Fonts\quicksand\Quicksand-Light.ttf" />
     <Content Include="Fonts\quicksand\Quicksand-Medium.ttf" />
     <Content Include="Fonts\quicksand\Quicksand-Regular.ttf" />
     <None Include="packages.config" />
+    <Content Include="Scripts\User\Master\jsoffcanvasnavigation.js" />
     <Content Include="View\Admin\Master\AdminMaster.Master" />
+    <Content Include="View\Admin\Webform\AdminLogin.aspx" />
     <Content Include="View\User\Master\UserMaster.Master" />
+    <Content Include="View\User\Master\UserMasterLearnJapanese.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,7 +96,6 @@
     <Content Include="Content\Image\User\Webform\slider_3.jpg" />
     <Content Include="Content\Style\User\Master\style.css" />
     <Content Include="Content\Style\User\Webform\style.css" />
-    <Content Include="Content\Style\W3.css" />
     <Content Include="Scripts\User\Master\jquery-1.8.3.min.js" />
     <Content Include="Scripts\User\Master\jquery-3.3.1.js" />
     <Content Include="Scripts\User\Master\jsslide.js" />
@@ -99,6 +103,7 @@
     <Content Include="Scripts\User\User\slide.js" />
     <Content Include="View\Admin\Webform\Home.aspx" />
     <Content Include="View\User\Webform\Home.aspx" />
+    <Content Include="View\User\Webform\HomeLJ.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +114,13 @@
     </Compile>
     <Compile Include="View\Admin\Master\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Webform\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Webform\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Webform\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -124,12 +136,26 @@
     <Compile Include="View\User\Master\UserMaster.Master.designer.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="View\User\Master\UserMasterLearnJapanese.Master.cs">
+      <DependentUpon>UserMasterLearnJapanese.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Master\UserMasterLearnJapanese.Master.designer.cs">
+      <DependentUpon>UserMasterLearnJapanese.Master</DependentUpon>
+    </Compile>
     <Compile Include="View\User\Webform\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\User\Webform\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Webform\HomeLJ.aspx.cs">
+      <DependentUpon>HomeLJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Webform\HomeLJ.aspx.designer.cs">
+      <DependentUpon>HomeLJ.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
