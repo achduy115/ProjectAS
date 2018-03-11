@@ -66,6 +66,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Image\Admin\Webform\loginBG.jpg" />
+    <Content Include="Content\Image\Admin\Webform\businessman.png" />
+    <Content Include="Content\Image\Admin\Webform\imgpsh_fullsize.jpg" />
+    <Content Include="Content\Image\Admin\Webform\userIcon.png" />
+    <Content Include="Content\Style\Admin\Webform\styleLogin.css" />
     <Content Include="Content\Style\User\Master\styleLJ.css" />
     <Content Include="Content\Style\W3.css" />
     <Content Include="Fonts\quicksand\Quicksand-Bold.ttf" />
@@ -159,9 +164,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Image\Admin\" />
     <Folder Include="Content\Style\Admin\Master\" />
-    <Folder Include="Content\Style\Admin\Webform\" />
     <Folder Include="Scripts\Admin\Master\" />
     <Folder Include="Scripts\Admin\User\" />
   </ItemGroup>

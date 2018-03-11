@@ -13,5 +13,26 @@ namespace ProjectAS.View.Admin.Webform
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txbUserName.Text == "" || txbPassword.Text == "")
+            {
+                if(txbUserName.Text == "")
+                {
+                    txbUserName.CssClass += " error";
+                    txbUserName.Attributes.Add("placeholder", "Xin hãy nhập tên đăng nhập");
+                }                 
+                if(txbPassword.Text == "")
+                {
+                    txbPassword.CssClass += " error";
+                    txbPassword.Attributes.Add("placeholder", "Xin hãy nhập mật khẩu");
+                }                 
+            }
+            else
+            {
+
+            }
+        }
     }
 }

@@ -19,10 +19,9 @@ GO
 CREATE TABLE table_AnimeCategory
 (
 	-- Table info
-	ID INT PRIMARY KEY IDENTITY,
-	Name NVARCHAR(50) NOT NULL,
+	ID VARCHAR(5) PRIMARY KEY, -- ROM, ACT, HAR etc...
+	Name NVARCHAR(50) NOT NULL, -- ROMANCE, ACTION, HAREM
 	Title NVARCHAR(100) NOT NULL DEFAULT N'Không có mô tả.',
-	...
 )
 GO
 
@@ -31,17 +30,28 @@ CREATE TABLE table_Anime
 (
 	-- Table info
 	ID VARCHAR(8) PRIMARY KEY, -- SUM15001, SPI16002, etc...
-	IDAnimeCategory INT NOT NULL, -- 1, 2, etc...
 	Name NVARCHAR(50) NOT NULL, -- Boku no pico, naruto, one piece, etc...
 	Image VARCHAR(100) NOT NULL, -- Link đến Image
 	Title VARCHAR(100) NOT NULL DEFAULT N'Không có tiêu đề.',
 	Content NVARCHAR(200) NOT NULL DEFAULT N'Không có nôi dung.',
 	CurrentEpisode VARCHAR(5) NOT NULL DEFAULT '0',
 	MaxEpisode VARCHAR(5) NOT NULL DEFAULT '??', 
-	
+)
+GO
+
+-- Table Anime Category - Anime
+
+CREATE TABLE table_AnimeCategory_Anime
+(
+	-- Table info
+	IdAnimeCategory VARCHAR(5), -- ROM, ACT, HAR etc...
+	IDAnime VARCHAR(8), -- SUM15001, SPI16002, etc...
+
 	-- Foreign
 	FOREIGN KEY (IDAnimeCategory) 
-		REFERENCES table_AnimeCategory (ID)
+		REFERENCES table_AnimeCategory (ID),
+	FOREIGN KEY (IDAnime) 
+		REFERENCES table_Anime (ID)
 )
 GO
 
@@ -87,12 +97,21 @@ CREATE TABLE table_InfoEpisode
 )
 GO
 
--- Table Account
-CREATE TABLE table_Account --
+-- Table Account User
+CREATE TABLE table_AccountUser --
 (
 	ID INT PRIMARY KEY IDENTITY,
 	Name NVARCHAR(50) NOT NULL,
 	Email VARCHAR(50) NOT NULL,
+)
+
+-- Table Account Admin
+CREATE TABLE table_AccountAdmin --
+(
+	ID INT PRIMARY KEY IDENTITY,
+	Name NVARCHAR(50) NOT NULL,
+	UserName VARCHAR(50) NOT NULL,
+	PassWord VARCHAR(50) NOT NULL,
 )
 
 -- Table Comment
@@ -107,6 +126,7 @@ CREATE TABLE table_Comment --
 )
 GO
 
+-- Table Info Commnent
 CREATE TABLE table_InfoComment --
 (
 	-- Table info
@@ -114,14 +134,15 @@ CREATE TABLE table_InfoComment --
 	IDComment INT NOT NULL,
 	IDAccount INT NOT NULL,
 	Info NVARCHAR(500) NOT NULL DEFAULT N'Không có thông tin.',
+	Checked BIT DEFAULT 0
 	-- Foreign
 	FOREIGN KEY (IDAccount)
-		REFERENCES table_Account (ID)
+		REFERENCES table_AccountUser(ID)
 )
 GO
 
--- Table View
-CREATE TABLE table_View --
+-- Table AnimeView
+CREATE TABLE table_AnimeView --
 (
 	-- Table info
 	IDAnime VARCHAR(8) NOT NULL, 
@@ -130,8 +151,19 @@ CREATE TABLE table_View --
 	MonthView INT NOT NULL DEFAULT 0,
 	TotalView INT NOT NULL DEFAULT 0,
 	--- Foreign
+	FOREIGN KEY (IDAnime)
+		REFERENCES table_Anime (ID)
 )
 GO
+
+-- Table WebView
+CREATE TABLE table_WebView --VALUES
+(
+	DayView INT NOT NULL DEFAULT 0,
+	WeekView INT NOT NULL DEFAULT 0,
+	MonthView INT NOT NULL DEFAULT 0,
+	TotalView INT NOT NULL DEFAULT 0,
+)
 
 -- Table study Japanese
 CREATE TABLE table_Japanese --ALL
