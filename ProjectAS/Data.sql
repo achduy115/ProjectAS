@@ -133,7 +133,7 @@ CREATE TABLE table_InfoComment --
 	Info NVARCHAR(500) NOT NULL DEFAULT N'Không có thông tin.', -- Nôi dung comment
 	Checked BIT DEFAULT 0 -- Check để biết comment này admin đã đọc chưa
 	-- Foreign
-	FOREIGN KEY (IDAccount)
+	FOREIGN KEY (IDAccountUser)
 		REFERENCES table_AccountUser(ID)
 )
 GO
