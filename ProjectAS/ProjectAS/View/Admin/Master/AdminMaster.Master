@@ -3,55 +3,106 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title></title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../style/User/Master/style.css" />
-        <link rel="stylesheet" type="text/css" href="../../style/User/Master/style.css" />
-        <asp:ContentPlaceHolder ID="head" runat="server">
-        </asp:ContentPlaceHolder>
-    </head>
-    <body>
-        <form runat="server">
-            <div>
-                <nav>
-                    <div class="logo">ANIME</div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Learn Japanese</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a class="active" href="#">Log In</a></li>
-                    </ul>
-                </nav>
-                <section class="sec1">
-                    <%--<div id="slider">
-                        <img class="slide" src="../../images/slider_1.jpg" stt="0" />
-                        <img class="slide" src="../../images/slider_2.jpg" stt="1" style="display: none" />
-                        <img class="slide" src="../../images/slider_3.jpg" stt="2" style="display: none"/>
-                        <a href="#" id="prev"><img src="../../images/prev.png" width="50px" height="50px"/></a>
-                        <a href="#" id="next"><img src="../../images/next.png" width="50px" height="50px"/></a>
-                    </div>--%>
-                </section>
-                <section class="content">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </section>
-                <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <footer>
+<head>
+    <title>Quản lý</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                </footer>
+    <!-- Add Bootstrap, Fontawesome, style, W3 -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../Content/Style/Admin/Master/styleMaster.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <!-- SideBar -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: none" id="sideBar">
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <!-- Accordion Management -->
+        <div>
+            <!-- Main -->
+            <div class="w3-bar-item w3-button" onclick="myAcc(arrowManagement)">
+                Quản lý <i id="arrowManagement" class="fa fa-caret-down " style="float: right"></i>
             </div>
-        </form>
-        <script type="text/javascript" src="../../js/User/Master/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="../../js/User/Master/jsslide.js"></script>
-        <script type="text/javascript" src="../../js/User/Master/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="../../js/User/Master/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="../../js/User/Master/jsslide.js"></script>
-        <script type="text/javascript" src="../../js/User/Master/jsstickynavbar.js"></script>
-    </body>
+
+            <!-- Sub -->
+            <div id="AccManagement" class="w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">Anime</a>
+                <a href="#" class="w3-bar-item w3-button">Thể loại</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+    <!-- Page -->
+    <div id="mainPage">
+        <!-- Top Nav -->
+        <div class="w3-teal">
+            <div class="w3-container" style="height: 40px">
+                <!-- Icon Menu -->
+                <div class="container" onclick="changeAnimation(this), Menu() ">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Section -->
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </section>
+    </div>
+
+
+    <!-- Javascript -->
+    <script>
+        var show = 0;
+
+        function changeAnimation(x) {
+            x.classList.toggle("change");
+        }
+
+        function Menu() {          
+            if (show === 0) {
+                // Open
+                show = 1;
+                document.getElementById("mainPage").style.marginLeft = "20%";
+                document.getElementById("sideBar").style.width = "20%";
+                document.getElementById("sideBar").style.display = "block";
+                document.getElementById("openNav").style.display = "none";
+                document.getElementById("closeNav").style.display = "inline-block";
+            } else {
+                // Close
+                show = 0;
+                document.getElementById("mainPage").style.marginLeft = "0%";
+                document.getElementById("sideBar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+                document.getElementById("closeNav").style.display = "none";
+            }
+        }
+
+        function myAcc(_arrow) {
+            var x = document.getElementById("AccManagement");
+
+            _arrow.classList.toggle("rotate");
+
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-green";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+
+    </script>
+</body>
 </html>

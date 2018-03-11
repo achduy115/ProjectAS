@@ -70,6 +70,8 @@
     <Content Include="Content\Image\Admin\Webform\businessman.png" />
     <Content Include="Content\Image\Admin\Webform\imgpsh_fullsize.jpg" />
     <Content Include="Content\Image\Admin\Webform\userIcon.png" />
+    <Content Include="Content\Style\Admin\Master\styleMaster.css" />
+    <Content Include="Content\Style\Admin\Webform\styleDashboard.css" />
     <Content Include="Content\Style\Admin\Webform\styleLogin.css" />
     <Content Include="Content\Style\User\Master\styleLJ.css" />
     <Content Include="Content\Style\W3.css" />
@@ -81,6 +83,8 @@
     <Content Include="Scripts\User\Master\jsoffcanvasnavigation.js" />
     <Content Include="View\Admin\Master\AdminMaster.Master" />
     <Content Include="View\Admin\Webform\AdminLogin.aspx" />
+    <Content Include="View\Admin\Webform\AnimeCategory.aspx" />
+    <Content Include="View\Admin\Webform\Dashboard.aspx" />
     <Content Include="View\User\Master\UserMaster.Master" />
     <Content Include="View\User\Master\UserMasterLearnJapanese.Master" />
     <None Include="Web.Debug.config">
@@ -106,7 +110,6 @@
     <Content Include="Scripts\User\Master\jsslide.js" />
     <Content Include="Scripts\User\Master\jsstickynavbar.js" />
     <Content Include="Scripts\User\User\slide.js" />
-    <Content Include="View\Admin\Webform\Home.aspx" />
     <Content Include="View\User\Webform\Home.aspx" />
     <Content Include="View\User\Webform\HomeLJ.aspx" />
     <Content Include="Web.config" />
@@ -127,12 +130,19 @@
     <Compile Include="View\Admin\Webform\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\Webform\Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="View\Admin\Webform\AnimeCategory.aspx.cs">
+      <DependentUpon>AnimeCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Admin\Webform\Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="View\Admin\Webform\AnimeCategory.aspx.designer.cs">
+      <DependentUpon>AnimeCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Webform\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Webform\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\User\Master\UserMaster.Master.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>
@@ -164,7 +174,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Style\Admin\Master\" />
     <Folder Include="Scripts\Admin\Master\" />
     <Folder Include="Scripts\Admin\User\" />
   </ItemGroup>
