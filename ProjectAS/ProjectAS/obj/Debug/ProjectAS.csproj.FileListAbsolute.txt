@@ -16,3 +16,9 @@ D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csprojResol
 D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.csproj.CoreCompileInputs.cache
 D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.dll
 D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\obj\Debug\ProjectAS.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\BUS.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\DTO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\DAO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\BUS.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\DTO.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\ProjectAS\bin\DAO.pdb

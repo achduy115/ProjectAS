@@ -1,0 +1,10 @@
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\BUS.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\BUS.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\DAO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\DTO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\DAO.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\bin\Debug\DTO.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.pdb

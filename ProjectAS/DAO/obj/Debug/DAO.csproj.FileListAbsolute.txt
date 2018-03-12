@@ -1,0 +1,8 @@
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\bin\Debug\DAO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\bin\Debug\DAO.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\bin\Debug\DTO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\bin\Debug\DTO.pdb
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\obj\Debug\DAO.dll
+D:\Projects\GitHub\ProjectAS\ProjectAS\DAO\obj\Debug\DAO.pdb

@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../Content/Style/Admin/Master/styleMaster.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        .w3-allerta {
+            font-family: "Allerta Stencil", Sans-serif;
+        }
+    </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -22,7 +30,7 @@
 
     <!-- SideBar -->
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: none" id="sideBar">
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="../Webform/Dashboard.aspx" class="w3-bar-item w3-button">Dashboard</a>
         <!-- Accordion Management -->
         <div>
             <!-- Main -->
@@ -33,7 +41,7 @@
             <!-- Sub -->
             <div id="AccManagement" class="w3-hide w3-white w3-card-4">
                 <a href="#" class="w3-bar-item w3-button">Anime</a>
-                <a href="#" class="w3-bar-item w3-button">Thể loại</a>
+                <a href="../Webform/AnimeCategory.aspx" class="w3-bar-item w3-button">Thể loại</a>
             </div>
         </div>
         <a href="#" class="w3-bar-item w3-button">Link 3</a>
