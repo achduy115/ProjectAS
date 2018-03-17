@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimeCategory_Anime_Repository.cs" />
     <Compile Include="AnimeCategory_Repository.cs" />
+    <Compile Include="Anime_Repository.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

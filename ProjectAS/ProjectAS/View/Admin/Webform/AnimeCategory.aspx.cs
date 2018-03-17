@@ -27,7 +27,7 @@ namespace ProjectAS.View.Admin.Webform
         {          
             string id = (txbID.Text).ToString();
             string name = (txbNameDisplay.Text).ToString();
-            DTO.AnimeCategory category = new DTO.AnimeCategory(id, name);
+            AnimeCategory_Model category = new AnimeCategory_Model(id, name);
 
             addAnimeCategory(category);
         }
@@ -43,7 +43,7 @@ namespace ProjectAS.View.Admin.Webform
             string id = gvSummaryAnimeCategory.DataKeys[e.RowIndex].Value.ToString();
             string name = (gvSummaryAnimeCategory.Rows[e.RowIndex].Cells[1].Controls[0]
                 as TextBox).Text;
-            DTO.AnimeCategory category = new DTO.AnimeCategory(id, name);
+            AnimeCategory_Model category = new AnimeCategory_Model(id, name);
             if (AnimeCategory_Service.Instance.updateAnimeCategory(category))
             {
                 //Success
@@ -95,7 +95,7 @@ namespace ProjectAS.View.Admin.Webform
             gvSummaryAnimeCategory.DataBind();
         }
 
-        private void addAnimeCategory(DTO.AnimeCategory category)
+        private void addAnimeCategory(AnimeCategory_Model category)
         {
             if (AnimeCategory_Service.Instance.addAnimeCategory(category))
             {
@@ -112,6 +112,7 @@ namespace ProjectAS.View.Admin.Webform
             }
         }
 
+        
 
         #endregion
 

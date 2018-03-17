@@ -56,13 +56,11 @@
                         <!-- Mã thể loài -->
                         <label class="w3-text-blue"><b>Mã thể loại:</b></label>
                         <br />
-                        <label class=""><b>VD: ROM, ACT</b></label>
-                        <asp:TextBox runat="server" ID="txbID" CssClass="w3-input w3-border"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txbID" CssClass="w3-input w3-border" placeholder="VD: ROM, ACT"></asp:TextBox>
                         <!-- Tên thể loài -->
                         <label class="w3-text-blue"><b>Tên thể loại:</b></label>
                         <br />
-                        <label class=""><b>VD: Tình cảm, hành động</b></label>
-                        <asp:TextBox runat="server" ID="txbNameDisplay" CssClass="w3-input w3-border"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txbNameDisplay" CssClass="w3-input w3-border" placeholder="VD: Tình cảm, hành động"></asp:TextBox>
                         <!-- Nút nhấn -->
                         <div class="w3-row" style="margin: 10px 10px 40px 10px">
                             <div class="w3-col l4">

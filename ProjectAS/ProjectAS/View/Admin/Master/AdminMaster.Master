@@ -40,8 +40,14 @@
 
             <!-- Sub -->
             <div id="AccManagement" class="w3-hide w3-white w3-card-4">
-                <a href="#" class="w3-bar-item w3-button">Anime</a>
+                <!-- Anime -->
+                <a href="../Webform/Anime.aspx" class="w3-bar-item w3-button">Anime</a>
+                <!-- Anime Category -->
                 <a href="../Webform/AnimeCategory.aspx" class="w3-bar-item w3-button">Thể loại</a>
+                <!-- SubTeam -->
+                <a href="../Webform/SubTeam.aspx" class="w3-bar-item w3-button">Nhóm sub</a>
+                <!-- Tập phim -->
+                <a href="../Webform/Episode.aspx" class="w3-bar-item w3-button">Tập phim</a>
             </div>
         </div>
         <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -54,9 +60,9 @@
             <div class="w3-container" style="height: 40px">
                 <!-- Icon Menu -->
                 <div class="container" onclick="changeAnimation(this), Menu() ">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+                    <div class="bar1 w3-white"></div>
+                    <div class="bar2 w3-white"></div>
+                    <div class="bar3 w3-white"></div>
                 </div>
             </div>
         </div>

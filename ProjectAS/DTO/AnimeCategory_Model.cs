@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class AnimeCategory
+    public class AnimeCategory_Model
     {
         public string ID { get; set; }
         public string NameDisplay { get; set; }
 
-        public AnimeCategory() { }
+        public AnimeCategory_Model(){ }
 
-        public AnimeCategory(string id, string name)
+        public AnimeCategory_Model(string id, string name)
         {
             this.ID = id;
             this.NameDisplay = name;
         }
 
-        public AnimeCategory(DataRow row)
+        public AnimeCategory_Model(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.NameDisplay = row["nameDisplay"].ToString();

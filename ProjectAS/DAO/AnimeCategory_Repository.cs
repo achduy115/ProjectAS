@@ -22,15 +22,15 @@ namespace DAO
         private AnimeCategory_Repository() { }
 
         // Get list AnimeCategory from database
-        public List<AnimeCategory> getAnimeCategoryList()
+        public List<AnimeCategory_Model> getAnimeCategoryList()
         {
-            List<AnimeCategory> list = new List<AnimeCategory>();
+            List<AnimeCategory_Model> list = new List<AnimeCategory_Model>();
 
             DataTable data = DataProvider.Instance.ExecuteQuery("USP_LoadAnimeCategoryList");
 
             foreach (DataRow item in data.Rows)
             {
-                AnimeCategory animeCategory = new AnimeCategory(item);
+                AnimeCategory_Model animeCategory = new AnimeCategory_Model(item);
                 list.Add(animeCategory);
             }
 
@@ -44,7 +44,7 @@ namespace DAO
         }
 
         // Insert a AnimeCategory into database
-        public bool insertAnimeCategory(AnimeCategory category)
+        public bool insertAnimeCategory(AnimeCategory_Model category)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertAnimeCategory @ID , @NameDisplay", 
                 new object[] { category.ID, category.NameDisplay });
@@ -53,7 +53,7 @@ namespace DAO
         }
 
         // Update a Anime Category by ID 
-        public bool updateAnimeCategory(AnimeCategory category)
+        public bool updateAnimeCategoryByID(AnimeCategory_Model category)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_UpdateAnimeCategory @ID , @NameDisplay",
                 new object[] { category.ID, category.NameDisplay });
@@ -62,7 +62,7 @@ namespace DAO
         }
 
         // Delete a Anime Category by ID
-        public bool deleteAnimeCategory(string id)
+        public bool deleteAnimeCategoryByID(string id)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_DeleteAnimeCategory @ID ",
                 new object[] { id});

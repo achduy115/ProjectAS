@@ -22,7 +22,7 @@ namespace BUS
         private AnimeCategory_Service() { }
 
         // Load list anime category
-        public List<AnimeCategory> loadAnimeCategoryList()
+        public List<AnimeCategory_Model> loadAnimeCategoryList()
         {
             return AnimeCategory_Repository.Instance.getAnimeCategoryList();
         }
@@ -34,17 +34,17 @@ namespace BUS
         }
 
         // Add a anime category - WARNING
-        public bool addAnimeCategory(AnimeCategory category)
+        public bool addAnimeCategory(AnimeCategory_Model category)
         {
-            if(category.ID == "" || category.NameDisplay == "")
+            if (category.ID == "" || category.NameDisplay == "")
             {
                 return false;
             }
             else
             {
-                foreach(AnimeCategory item in loadAnimeCategoryList())
+                foreach (AnimeCategory_Model item in loadAnimeCategoryList())
                 {
-                    if(category.ID == item.ID || category.NameDisplay == item.NameDisplay)
+                    if (category.ID == item.ID || category.NameDisplay == item.NameDisplay)
                     {
                         return false;
                     }
@@ -54,30 +54,39 @@ namespace BUS
         }
 
         // update a Anime Category - WARNING
-        public bool updateAnimeCategory(AnimeCategory category)
+        public bool updateAnimeCategory(AnimeCategory_Model category)
         {
-            if(category.NameDisplay == "")
+            if (category.NameDisplay == "")
             {
                 return false;
             }
             else
             {
-                foreach (AnimeCategory item in loadAnimeCategoryList())
+                foreach (AnimeCategory_Model item in loadAnimeCategoryList())
                 {
                     if (category.NameDisplay == item.NameDisplay)
                     {
                         return false;
                     }
                 }
-                return AnimeCategory_Repository.Instance.updateAnimeCategory(category);
+                return AnimeCategory_Repository.Instance.updateAnimeCategoryByID(category);
             }
         }
 
         // delete a anime category - WARNING - Chưa ràng buộc xóa với các khóa ngoại
         public bool deleteAnimeCategory(string id)
         {
-            return AnimeCategory_Repository.Instance.deleteAnimeCategory(id);
+            if (AnimeCategory_Repository.Instance.deleteAnimeCategoryByID(id))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
+
 
     }
 }

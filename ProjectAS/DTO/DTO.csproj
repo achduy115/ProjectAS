@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimeCategory.cs" />
+    <Compile Include="AnimeCategory_Anime_Model.cs" />
+    <Compile Include="AnimeCategory_Model.cs" />
+    <Compile Include="Anime_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
