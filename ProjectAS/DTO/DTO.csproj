@@ -40,10 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAmin_Model.cs" />
+    <Compile Include="AccountUser_Model.cs" />
     <Compile Include="AnimeCategory_Anime_Model.cs" />
     <Compile Include="AnimeCategory_Model.cs" />
+    <Compile Include="AnimeView_Model.cs" />
     <Compile Include="Anime_Model.cs" />
+    <Compile Include="Comment_Model.cs" />
+    <Compile Include="Episode_Model.cs" />
+    <Compile Include="InfoComment_Model.cs" />
+    <Compile Include="InfoEpisode_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubTeam_Model.cs" />
+    <Compile Include="WebView_Model.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

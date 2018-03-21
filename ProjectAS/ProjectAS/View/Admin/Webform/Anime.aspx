@@ -17,7 +17,9 @@
                         <h2 class="w3-text-gray w3-allerta w3-center">Tổng quan anime</h2>
                         <div class="w3-container" style="margin: 15px">
                             <!-- GridView -->
-                            <asp:GridView ID="gvAnimeList" runat="server" DataKeyNames="ID" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Width="1242px" OnRowCancelingEdit="gvAnimeList_RowCancelingEdit" OnRowDeleting="gvAnimeList_RowDeleting" OnRowUpdating="gvAnimeList_RowUpdating" OnRowEditing="gvAnimeList_RowEditing">
+                            <asp:GridView ID="gvAnimeList" runat="server" DataKeyNames="ID" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
+                                Width="100%" Height="100px" OnRowCancelingEdit="gvAnimeList_RowCancelingEdit" OnRowDeleting="gvAnimeList_RowDeleting" 
+                                OnRowUpdating="gvAnimeList_RowUpdating" OnRowEditing="gvAnimeList_RowEditing">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>
                                     <asp:TemplateField HeaderText="Mã Anime">

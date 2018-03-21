@@ -43,6 +43,7 @@
     <Compile Include="AnimeCategory_Service.cs" />
     <Compile Include="Anime_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubTeam_Service.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
