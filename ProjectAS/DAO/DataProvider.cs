@@ -22,6 +22,12 @@ namespace DAO
 
         private string connectionSTR = "Data Source=Yuu\\YUU;Initial Catalog=ProjectAS;Integrated Security=True";
 
+        /// <summary>
+        /// Execute a query and return a datatable
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -56,6 +62,12 @@ namespace DAO
             return data;
         }
 
+        /// <summary>
+        /// Excute a non query and return a data type int
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -88,6 +100,12 @@ namespace DAO
             return data;
         }
 
+        /// <summary>
+        /// Excute a scalar and return a object
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;

@@ -21,19 +21,29 @@ namespace BUS
 
         private AnimeCategory_Service() { }
 
-        // Load list anime category
+        /// <summary>
+        /// Load list anime category
+        /// </summary>
+        /// <returns></returns>
         public List<AnimeCategory_Model> loadAnimeCategoryList()
         {
             return AnimeCategory_Repository.Instance.getAnimeCategoryList();
         }
 
-        // Load anime category
+        /// <summary>
+        /// Load anime category
+        /// </summary>
+        /// <returns></returns>
         public DataTable loadAnimeCategory()
         {
             return AnimeCategory_Repository.Instance.getAnimeCategory();
         }
 
-        // Add a anime category - WARNING
+        /// <summary>
+        /// Add a anime category - WARNING
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool addAnimeCategory(AnimeCategory_Model category)
         {
             if (category.ID == "" || category.NameDisplay == "")
@@ -53,7 +63,11 @@ namespace BUS
             }
         }
 
-        // update a Anime Category - WARNING
+        /// <summary>
+        /// update a Anime Category - WARNING
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool updateAnimeCategory(AnimeCategory_Model category)
         {
             if (category.NameDisplay == "")
@@ -73,7 +87,11 @@ namespace BUS
             }
         }
 
-        // delete a anime category - WARNING - Chưa ràng buộc xóa với các khóa ngoại
+        /// <summary>
+        /// delete a anime category - WARNING - Chưa ràng buộc xóa với các khóa ngoại
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool deleteAnimeCategory(string id)
         {
             if (AnimeCategory_Repository.Instance.deleteAnimeCategoryByID(id))

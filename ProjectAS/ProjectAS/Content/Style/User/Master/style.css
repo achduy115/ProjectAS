@@ -1,18 +1,30 @@
 ﻿@font-face {
-    font-family: Quicksand;
-    src: url("../../../font/quicksand/Quicksand-Regular.ttf") format('truetype');
+    font-family: 'Quicksand';
     font-style: normal;
     font-weight: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
+    src:url('../../../../Fonts/quicksand/Quicksand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../../../Fonts/quicksand/Quicksand-Regular.woff') format('woff'),
+        url('../../../../Fonts/quicksand/Quicksand-Regular.ttf') format('truetype'),
+        url('../../../../Fonts/quicksand/Quicksand-Regular.svg#Quicksand') format('svg');
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    outline: none;
     font-family: Quicksand;
+}
+
+.clearfix{
+    clear: both;
+}
+a{
+    text-decoration: none;
+    text-transform: none;
+}
+
+a:after, a:before, a:active{
+    color: black;
 }
 
 /*Thiết kế menu*/
@@ -21,64 +33,67 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100px;
+    background: rgba(0,0,0,1);
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .3s;
 }
 
-    nav.black {
-        background: rgba(0,0,0,0.8);
-        height: 100px;
-        padding: 10px 100px;
-    }
+nav.black {
+    background: rgba(0,0,0,0.8);
+    height: 100px;
+    padding: 10px 100px;
+}
 
-    nav .logo {
-        padding: 22px 20px;
-        height: 80px;
-        float: left;
-        font-size: 24px;
-        transition: .3s;
-    }
+nav .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    color: red;
+    font-size: 24px;
+    transition: .3s;
+}
 
-    nav.black .logo {
-        color: #fff;
-    }
+nav.black .logo {
+    color: #fff;
+}
 
-    nav ul {
-        list-style: none;
-        float: right;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        nav ul li {
-            list-style: none;
-        }
+nav ul li {
+    list-style: none;
+}
 
-            nav ul li a {
-                line-height: 80px;
-                color: #151515;
-                padding: 12px 30px;
-                text-decoration: none;
-                text-transform: uppercase;
-                transition: .3s;
-            }
+nav ul li a {
+    line-height: 80px;
+    color: red;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
 
-    nav.black ul li a {
-        color: #fff;
-    }
+nav.black ul li a {
+    color: #fff;
+}
 
-    nav ul li a:focus {
-        outline: none;
-    }
+nav ul li a:focus {
+    outline: none;
+}
 
-    nav ul li a.active {
-        background: #E2472F;
-        color: #fff;
-        border-radius: 6px;
-    }
+nav ul li a.active {
+    background: #E2472F;
+    color: #fff;
+    border-radius: 6px;
+}
 
 section.sec1 img {
     width: 100%;
@@ -88,42 +103,48 @@ section.sec1 img {
     overflow: hidden;
 }
 
-.content {
-    margin-top: 80px;
+/*Thiết kế footer*/
+.footer {
+    margin: 30px auto auto;
+    background: #000;
+    font-size: 12px;
+    overflow: auto;
 }
 
-    .content p {
-        width: 900px;
-        margin: 30px auto;
-        text-align: justify;
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-/*Thiết kế cho slide*/
-#slider {
-    margin: 0 auto;
-    width: 600px;
-    height: 300px;
-    border: 1px solid #333;
-    position: relative;
+.footer, .footer .footer-social .footer-social-icon a{
+    color: #ccc;
+    text-align: justify;
 }
 
-.slide {
-    width: 600px;
-    height: 300px;
+.footer .footer-social .footer-social-icon{
+    float: left;
+    width: 45px;
+    height: 45px;
+    font-size: 32px;
+    line-height: 45px;
+    margin-right: 10px;
+    background: #222;
 }
 
-#prev {
-    text-transform: uppercase;
-    top: 130px;
-    left: 20px;
-    position: absolute;
+.footer .footer-trend{
+    width: 50%;
+    float: left;
+    padding: 10px;
 }
 
-#next {
-    text-transform: uppercase;
-    top: 130px;
-    right: 20px;
-    position: absolute;
+.footer .footer-contact{
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+.footer .footer-social{
+    width: 25%;
+    float: left;
+    padding: 25px 10px;
+}
+
+.footer-social img{
+    width: 45px;
+    height: 45px;
 }

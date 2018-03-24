@@ -1,5 +1,4 @@
-﻿<script>
-var myIndex = 0;
+﻿var myIndex = 0;
 carousel();
 
 function carousel() {
@@ -9,8 +8,9 @@ function carousel() {
        x[i].style.display = "none";  
     }
     myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
+    if (myIndex > x.length) {
+        myIndex = 1
+    }    
     x[myIndex-1].style.display = "block";  
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
-</script>

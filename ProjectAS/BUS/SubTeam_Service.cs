@@ -59,6 +59,15 @@ namespace BUS
             return SubTeam_Repository.Instance.DeleteSubTeamByID(ID);
         }
 
+        /// <summary>
+        /// Load a SubTeam by id
+        /// </summary>
+        /// <param name="idSubTeam"></param>
+        /// <returns></returns>
+        public SubTeam_Model LoadSubTeamByID(string idSubTeam)
+        {
+            return SubTeam_Repository.Instance.GetSubTeamByID(idSubTeam);
+        }
 
     }
 }

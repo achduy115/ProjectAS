@@ -3,40 +3,68 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title></title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../../../Content/Style/User/Master/style.css" rel="stylesheet" />
-        <asp:ContentPlaceHolder ID="head" runat="server">
-        </asp:ContentPlaceHolder>
-    </head>
-    <body>
-        <form runat="server">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../../Content/Style/User/Master/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div>
+            <nav>
+                <div class="logo">ANIME</div>
+                <ul>
+                    <li><a href="../Webform/Home.aspx">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="../Webform/HomeLJ.aspx">Learn Japanese</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Log In</a></li>
+                </ul>
+            </nav>
             <div>
-                <nav>
-                    <div class="logo">ANIME</div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Learn Japanese</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a class="active" href="#">Log In</a></li>
-                    </ul>
-                </nav>        
-                <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-                    </asp:ContentPlaceHolder>
-                </div>
-                <footer>
-
-                </footer>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
-        </form>
-        <script src="../../../Scripts/User/Master/jquery-1.8.3.min.js"></script>
-        <script src="../../../Scripts/User/Master/jquery-3.3.1.js"></script>
-        <script src="../../../Scripts/User/Master/jsslide.js"></script>
-        <script src="../../../Scripts/User/Master/jsstickynavbar.js"></script>
-    </body>
+            <div class="clearfix"></div>
+            <footer>
+                <div class="footer">
+                    <div class="footer-trend">
+                        <p>Xem <a href="http://vuighe.net">anime Vietsub online</a> miễn phí chất lượng cao với nội dung phong phú và nhiều thể loại hấp dẫn. Các anime HOT và anime theo mùa luôn được cập nhật sớm nhất Việt Nam. <a href="http://vuighe.net/vua-hai-tac">Vua Hải Tặc</a> <a href="http://vuighe.net/vua-hai-tac/tap-0-gioi-thieu-phim-vua-hai-tac">One Piece Vietsub</a>, <a href="http://vuighe.net/naruto-shippuuden">Naruto Shippuuden Vietsub</a>, Fairy Tail, Dragon Ball Super, Gintama, <a href="http://vuighe.net/naruto-dattebayo">Naruto Vietsub</a> và rất nhiều anime khác đang chờ các bạn thưởng thức.</p>
+                    </div>
+                    <div class="footer-contact">
+                        <p>
+                            Copyright ©sofun.net<br>
+                            47 đường 102 Cao Lỗ, P4, Q8, Tp.HCM<br>
+                            Email: imad@imad.com.vn
+                        </p>
+                    </div>
+                    <div class="footer-social">
+                        <div class="footer-social-icon">
+                            <a href="https://www.facebook.com" target="_blank" rel="nofollow">
+                                <img src="../../../Content/Image/Wallpaper/icons8_Facebook.png" /></a>
+                        </div>
+                        <div class="footer-social-icon">
+                            <a href="https://www.youtube.com" target="_blank" rel="nofollow">
+                                <img src="../../../Content/Image/Wallpaper/icons8_YouTube.png" /></a>
+                        </div>
+                        <div class="footer-social-icon">
+                            <a href="https://www.plus.google.com" target="_blank" rel="nofollow">
+                                <img src="../../../Content/Image/Wallpaper/icons8_Google_Plus.png" /></a>
+                        </div>
+                        <div class="footer-social-icon">
+                            <a href="https://twitter.com/?lang=vi" target="_blank" rel="nofollow">
+                                <img src="../../../Content/Image/Wallpaper/icons8_Twitter.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <script src="../../../Scripts/User/Master/jquery-1.8.3.min.js"></script>
+    <script src="../../../Scripts/User/Master/jquery-3.3.1.js"></script>
+    <script src="../../../Scripts/User/Master/jsstickynavbar.js"></script>
+</body>
 </html>

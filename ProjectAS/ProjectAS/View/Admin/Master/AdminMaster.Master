@@ -13,8 +13,12 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../Content/Style/Admin/Master/styleMaster.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil" />
+    <link href="../../../Content/Style/User/Webform/style.css" rel="stylesheet" />
+
+    <!-- Add JQuery, font -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <style>
         .w3-allerta {
@@ -23,7 +27,6 @@
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -69,11 +72,9 @@
         <!-- Section -->
         <section>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-
             </asp:ContentPlaceHolder>
         </section>
     </div>
-
 
     <!-- Javascript -->
     <script>
@@ -83,7 +84,7 @@
             x.classList.toggle("change");
         }
 
-        function Menu() {          
+        function Menu() {
             if (show === 0) {
                 // Open
                 show = 1;

@@ -65,7 +65,6 @@
 
             <div id="Add" class="w3-container w3-border tab" style="display: none">
                 <div class="w3-container" style="height: 100%; margin: 25px">
-
                     <div class="w3-container w3-card-4">
                         <h2 class="w3-text-gray w3-allerta w3-center"><b>Thêm thể loại</b></h2>
                         <!-- Mã thể loài -->
@@ -84,7 +83,7 @@
                         <div class="w3-row" style="margin: 10px 10px 40px 10px">
                             <div class="w3-col l4">
                                 <asp:Button runat="server" ID="btnAdd" CssClass="w3-button w3-gray w3-text-white w3-round" Text="Thêm" OnClick="btnAdd_Click"/>
-                                <asp:Button runat="server" ID="btnReset" CssClass="w3-button w3-gray w3-text-white w3-round" Text="Reset"/>
+                                <asp:Button runat="server" ID="btnReset" CssClass="w3-button w3-gray w3-text-white w3-round" Text="Reset" OnClick="btnReset_Click"/>
                             </div>
                             <div class="w3-col l4">
                                 <b>

@@ -70,23 +70,33 @@
     <Content Include="Content\Image\Admin\Webform\businessman.png" />
     <Content Include="Content\Image\Admin\Webform\imgpsh_fullsize.jpg" />
     <Content Include="Content\Image\Admin\Webform\userIcon.png" />
+    <Content Include="Content\Image\User\Webform\Anime\dagashikashi.png" />
+    <Content Include="Content\Image\User\Webform\Anime\karakaijouzunotakagisan.png" />
+    <Content Include="Content\Image\User\Webform\Anime\nanatsunotaizai.png" />
+    <Content Include="Content\Image\User\Webform\Anime\overlord.png" />
     <Content Include="Content\Style\Admin\Master\styleMaster.css" />
     <Content Include="Content\Style\Admin\Webform\styleDashboard.css" />
     <Content Include="Content\Style\Admin\Webform\styleLogin.css" />
     <Content Include="Content\Style\User\Master\styleLJ.css" />
-    <Content Include="Content\Style\W3.css" />
-    <Content Include="Fonts\quicksand\Quicksand-Bold.ttf" />
-    <Content Include="Fonts\quicksand\Quicksand-Light.ttf" />
-    <Content Include="Fonts\quicksand\Quicksand-Medium.ttf" />
+    <Content Include="Content\Style\User\Webform\styleWM.css" />
+    <Content Include="Fonts\quicksand\Quicksand-Regular.eot" />
     <Content Include="Fonts\quicksand\Quicksand-Regular.ttf" />
+    <Content Include="Fonts\quicksand\Quicksand-Regular.woff" />
     <None Include="packages.config" />
+    <Content Include="Fonts\quicksand\Quicksand-Regular.svg" />
+    <Content Include="Scripts\User\Master\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\User\Master\jquery-3.3.1.js" />
     <Content Include="Scripts\User\Master\jsoffcanvasnavigation.js" />
+    <Content Include="Scripts\User\Master\jsslide.js" />
+    <Content Include="Scripts\User\Master\jsstickynavbar.js" />
     <Content Include="View\Admin\Master\AdminMaster.Master" />
     <Content Include="View\Admin\Webform\AdminLogin.aspx" />
     <Content Include="View\Admin\Webform\Anime.aspx" />
     <Content Include="View\Admin\Webform\AnimeCategory.aspx" />
     <Content Include="View\Admin\Webform\Dashboard.aspx" />
     <Content Include="View\Admin\Webform\Episode.aspx" />
+    <Content Include="View\Admin\Webform\InfoAnime.aspx" />
+    <Content Include="View\Admin\Webform\InfoEpisode.aspx" />
     <Content Include="View\Admin\Webform\SubTeam.aspx" />
     <Content Include="View\User\Master\UserMaster.Master" />
     <Content Include="View\User\Master\UserMasterLearnJapanese.Master" />
@@ -108,13 +118,10 @@
     <Content Include="Content\Image\User\Webform\slider_3.jpg" />
     <Content Include="Content\Style\User\Master\style.css" />
     <Content Include="Content\Style\User\Webform\style.css" />
-    <Content Include="Scripts\User\Master\jquery-1.8.3.min.js" />
-    <Content Include="Scripts\User\Master\jquery-3.3.1.js" />
-    <Content Include="Scripts\User\Master\jsslide.js" />
-    <Content Include="Scripts\User\Master\jsstickynavbar.js" />
     <Content Include="Scripts\User\User\slide.js" />
     <Content Include="View\User\Webform\Home.aspx" />
     <Content Include="View\User\Webform\HomeLJ.aspx" />
+    <Content Include="View\User\Webform\WatchMovie.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +168,20 @@
     <Compile Include="View\Admin\Webform\Episode.aspx.designer.cs">
       <DependentUpon>Episode.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\Webform\InfoAnime.aspx.cs">
+      <DependentUpon>InfoAnime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Webform\InfoAnime.aspx.designer.cs">
+      <DependentUpon>InfoAnime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Webform\InfoEpisode.aspx.cs">
+      <DependentUpon>InfoEpisode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Webform\InfoEpisode.aspx.designer.cs">
+      <DependentUpon>InfoEpisode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\Webform\SubTeam.aspx.cs">
       <DependentUpon>SubTeam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +216,13 @@
     </Compile>
     <Compile Include="View\User\Webform\HomeLJ.aspx.designer.cs">
       <DependentUpon>HomeLJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Webform\WatchMovie.aspx.cs">
+      <DependentUpon>WatchMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Webform\WatchMovie.aspx.designer.cs">
+      <DependentUpon>WatchMovie.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

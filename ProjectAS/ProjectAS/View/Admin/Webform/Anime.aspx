@@ -18,56 +18,36 @@
                         <div class="w3-container" style="margin: 15px">
                             <!-- GridView -->
                             <asp:GridView ID="gvAnimeList" runat="server" DataKeyNames="ID" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
-                                Width="100%" Height="100px" OnRowCancelingEdit="gvAnimeList_RowCancelingEdit" OnRowDeleting="gvAnimeList_RowDeleting" 
-                                OnRowUpdating="gvAnimeList_RowUpdating" OnRowEditing="gvAnimeList_RowEditing">
+                                Width="100%" Height="100px">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>
                                     <asp:TemplateField HeaderText="Mã Anime">
-                                        <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ID") %>'></asp:TextBox>
-                                        </EditItemTemplate>
                                         <ItemTemplate>
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Tên Anime">
-                                        <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("NameDisplay") %>'></asp:TextBox>
-                                        </EditItemTemplate>
                                         <ItemTemplate>
                                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("NameDisplay") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField>
-                                        <ItemTemplate>
-                                            <asp:Image ID="ImageUrl" runat="server" Height="200px" Width="200px" ImageUrl='<%# "~/Content/Image/Wallpaper/" + Eval("ImageUrl") %>' />
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Nội dung">
-                                        <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Content") %>' Width="200px" Height="200px"></asp:TextBox>
-                                        </EditItemTemplate>
-                                        <ItemTemplate>
-                                            <asp:Label ID="Label3" runat="server" Text='<%# Bind("Content") %>' Width="200px" Height="200px"></asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Tập">
-                                        <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("CurrentEpisode") %>'></asp:TextBox>
-                                        </EditItemTemplate>
                                         <ItemTemplate>
                                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("CurrentEpisode") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Tổng tập">
-                                        <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("MaxEpisode") %>'></asp:TextBox>
-                                        </EditItemTemplate>
                                         <ItemTemplate>
                                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("MaxEpisode") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:CommandField CancelText="Hủy" DeleteText="Xóa" EditText="Sửa" ShowDeleteButton="True" ShowEditButton="True" />
+                                    <asp:TemplateField HeaderText="Info">
+                                        <ItemTemplate>
+                                            <asp:Button runat="server" ID="btnInfo" 
+                                                PostBackUrl='<%# "InfoAnime.aspx?idanime=" + Eval("ID") %>' Text="Xem" 
+                                                CssClass="w3-button w3-gray w3-text-white w3-allerta" Width="100%" Height="100%"/>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -157,9 +137,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </form>
     </div>

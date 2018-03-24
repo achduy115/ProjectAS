@@ -33,50 +33,50 @@ namespace ProjectAS.View.Admin.Webform
             txbID.Text = Anime_Service.Instance.LoadID(lbSeason.SelectedValue, lbYear.SelectedValue);
         }
 
-        protected void gvAnimeList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-            gvAnimeList.EditIndex = -1;
-            LoadAnime();
-        }
-
-        protected void gvAnimeList_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            string id = gvAnimeList.DataKeys[e.RowIndex].Value.ToString();
-            if (Anime_Service.Instance.DeleteAnime(id))
-            {
-                // Successs
-            }
-            else
-            {
-                // Error
-            }
-            LoadAnime();
-            txbID.Text = Anime_Service.Instance.LoadID(lbSeason.SelectedValue, lbYear.SelectedValue);
-
-        }
-
-        protected void gvAnimeList_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            string id = gvAnimeList.DataKeys[e.RowIndex].Value.ToString();
-            string name = (gvAnimeList.Rows[e.RowIndex].Cells[1].Controls[0] as TextBox).Text;
-            string imageUrl = (gvAnimeList.Rows[e.RowIndex].Cells[2].Controls[0] as TextBox).Text;
-            string content = (gvAnimeList.Rows[e.RowIndex].Cells[3].Controls[0] as TextBox).Text;
-            string currentEpisode = (gvAnimeList.Rows[e.RowIndex].Cells[4].Controls[0] as TextBox).Text;
-            string maxEpisode = (gvAnimeList.Rows[e.RowIndex].Cells[5].Controls[0] as TextBox).Text;
-
-            Anime_Model anime = new Anime_Model(id, name, imageUrl, content, currentEpisode, maxEpisode);
-            if (Anime_Service.Instance.UpdateAnime(anime))
-            {
-                // Success
-            }
-            else
-            {
-                // Error
-            }
-            LoadAnime();
-            txbID.Text = Anime_Service.Instance.LoadID(lbSeason.SelectedValue, lbYear.SelectedValue);
-
-        }
+//         protected void gvAnimeList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+//         {
+//             gvAnimeList.EditIndex = -1;
+//             LoadAnime();
+//         }
+// 
+//         protected void gvAnimeList_RowDeleting(object sender, GridViewDeleteEventArgs e)
+//         {
+//             string id = gvAnimeList.DataKeys[e.RowIndex].Value.ToString();
+//             if (Anime_Service.Instance.DeleteAnime(id))
+//             {
+//                 // Successs
+//             }
+//             else
+//             {
+//                 // Error
+//             }
+//             LoadAnime();
+//             txbID.Text = Anime_Service.Instance.LoadID(lbSeason.SelectedValue, lbYear.SelectedValue);
+// 
+//         }
+// 
+//         protected void gvAnimeList_RowUpdating(object sender, GridViewUpdateEventArgs e)
+//         {
+//             string id = gvAnimeList.DataKeys[e.RowIndex].Value.ToString();
+//             string name = (gvAnimeList.Rows[e.RowIndex].Cells[1].Controls[0] as TextBox).Text;
+//             string imageUrl = (gvAnimeList.Rows[e.RowIndex].Cells[2].Controls[0] as TextBox).Text;
+//             string content = (gvAnimeList.Rows[e.RowIndex].Cells[3].Controls[0] as TextBox).Text;
+//             string currentEpisode = (gvAnimeList.Rows[e.RowIndex].Cells[4].Controls[0] as TextBox).Text;
+//             string maxEpisode = (gvAnimeList.Rows[e.RowIndex].Cells[5].Controls[0] as TextBox).Text;
+// 
+//             Anime_Model anime = new Anime_Model(id, name, imageUrl, content, currentEpisode, maxEpisode);
+//             if (Anime_Service.Instance.UpdateAnime(anime))
+//             {
+//                 // Success
+//             }
+//             else
+//             {
+//                 // Error
+//             }
+//             LoadAnime();
+//             txbID.Text = Anime_Service.Instance.LoadID(lbSeason.SelectedValue, lbYear.SelectedValue);
+// 
+//         }
 
         protected void gvAnimeList_RowEditing(object sender, GridViewEditEventArgs e)
         {

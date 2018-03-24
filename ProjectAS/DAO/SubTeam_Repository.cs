@@ -41,6 +41,18 @@ namespace DAO
         }
 
         /// <summary>
+        /// Get a SubTeam by Id
+        /// </summary>
+        /// <param name="idSubTeam"></param>
+        /// <returns></returns>
+        public SubTeam_Model GetSubTeamByID(string idSubTeam)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.table_SubTeam " +
+                "WHERE ID = '" + idSubTeam + "'");
+            return new SubTeam_Model(data.Rows[0]);
+        }
+
+        /// <summary>
         /// Add a Subteam into db
         /// </summary>
         /// <param name="subTeam"></param>
@@ -75,6 +87,24 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery("DELETE dbo.table_SubTeam " +
                 " WHERE ID = '"+ id +"'");
             return result > 0;
+        }
+
+        /// <summary>
+        /// Get IdSubTeam list from db
+        /// </summary>
+        /// <returns></returns>
+        public List<string> GetIdSubTeamList()
+        {
+            List<string> list = new List<string>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ID FROM dbo.table_SubTeam");
+
+            foreach(DataRow item in data.Rows)
+            {
+                list.Add(item["id"].ToString());
+            }
+
+            return list;
         }
 
     }

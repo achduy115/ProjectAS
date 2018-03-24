@@ -19,7 +19,11 @@ namespace DAO
 
         private AnimeCategory_Anime_Repository() { }
 
-        // Add a Anime Category - Anime
+        /// <summary>
+        /// Add a Anime Category - Anime
+        /// </summary>
+        /// <param name="animeCategory_Anime"></param>
+        /// <returns></returns>
         public bool InsertAnimeCategory_Anime(AnimeCategory_Anime_Model animeCategory_Anime)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("INSERT INTO dbo.table_AnimeCategory_Anime " +
@@ -27,7 +31,11 @@ namespace DAO
             return result > 0;
         }
 
-        // Delete a Anime Category - Anime by AnimeID
+        /// <summary>
+        /// Delete a Anime Category - Anime by AnimeID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool DeleteAnimeCategory_AnimeByAnimeID(string id)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("DELETE dbo.table_AnimeCategory_Anime " +

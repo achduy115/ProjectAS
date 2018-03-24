@@ -21,7 +21,10 @@ namespace DAO
 
         private AnimeCategory_Repository() { }
 
-        // Get list AnimeCategory from database
+        /// <summary>
+        /// Get list AnimeCategory from database
+        /// </summary>
+        /// <returns></returns>
         public List<AnimeCategory_Model> getAnimeCategoryList()
         {
             List<AnimeCategory_Model> list = new List<AnimeCategory_Model>();
@@ -37,13 +40,20 @@ namespace DAO
             return list;
         }
 
-        // Get AnimeVategory from database
+        /// <summary>
+        /// Get AnimeVategory from database
+        /// </summary>
+        /// <returns></returns>
         public DataTable getAnimeCategory()
         {
             return DataProvider.Instance.ExecuteQuery("USP_LoadAnimeCategoryList");
         }
 
-        // Insert a AnimeCategory into database
+        /// <summary>
+        /// Insert a AnimeCategory into database
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool insertAnimeCategory(AnimeCategory_Model category)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertAnimeCategory @ID , @NameDisplay", 
@@ -52,7 +62,11 @@ namespace DAO
             return result > 0;
         }
 
-        // Update a Anime Category by ID 
+        /// <summary>
+        /// Update a Anime Category by ID 
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool updateAnimeCategoryByID(AnimeCategory_Model category)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_UpdateAnimeCategory @ID , @NameDisplay",
@@ -61,7 +75,11 @@ namespace DAO
             return result > 0;
         }
 
-        // Delete a Anime Category by ID
+        /// <summary>
+        /// Delete a Anime Category by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool deleteAnimeCategoryByID(string id)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_DeleteAnimeCategory @ID ",

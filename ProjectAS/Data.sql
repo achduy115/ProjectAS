@@ -101,6 +101,7 @@ CREATE TABLE table_AccountUser --
 	NameDisplay NVARCHAR(50) NOT NULL, -- Tên hiển thị
 	Email VARCHAR(50) NOT NULL, -- Email
 )
+GO
 
 -- Table Account Admin
 CREATE TABLE table_AccountAdmin --
@@ -110,6 +111,7 @@ CREATE TABLE table_AccountAdmin --
 	UserName VARCHAR(50) NOT NULL, -- tên đăng nhập
 	PassWord VARCHAR(50) NOT NULL, -- mật khẩu
 )
+GO
 
 -- Table Comment
 CREATE TABLE table_Comment --

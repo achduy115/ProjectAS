@@ -8,3 +8,14 @@ D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csprojResolveAssemblyRe
 D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.dll
 D:\Projects\GitHub\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.pdb
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\BUS.dll
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\BUS.pdb
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\DAO.dll
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\DAO.pdb
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.dll
+C:\Users\Admin\Desktop\ProjectAS\ProjectAS\BUS\obj\Debug\BUS.pdb

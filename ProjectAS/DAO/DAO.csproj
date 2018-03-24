@@ -40,12 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAdmin_Repository.cs" />
+    <Compile Include="AccountUser_Repository.cs" />
     <Compile Include="AnimeCategory_Anime_Repository.cs" />
     <Compile Include="AnimeCategory_Repository.cs" />
+    <Compile Include="AnimeView_Repository.cs" />
     <Compile Include="Anime_Repository.cs" />
+    <Compile Include="Comment_Repository.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Episode_Repository.cs" />
+    <Compile Include="InfoComment_Repository.cs" />
+    <Compile Include="InfoEpisode_Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubTeam_Repository.cs" />
+    <Compile Include="WebView_Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

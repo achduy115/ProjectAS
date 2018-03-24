@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,13 @@ namespace DTO
             this.IDAnime = idAnime;
             this.IDSubTeam = idSubTeam;
         }
-        
+
+        public Episode_Model(DataRow rows)
+        {
+            this.ID = rows["id"].ToString();
+            this.IDAnime = rows["idAnime"].ToString();
+            this.IDSubTeam = rows["IDSubTeam"].ToString();
+        }
+
     }
 }

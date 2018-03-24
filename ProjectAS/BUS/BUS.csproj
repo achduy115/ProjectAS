@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAdmin_Service.cs" />
+    <Compile Include="AccountUser_Service.cs" />
+    <Compile Include="AnimeCategory_Anime_Service.cs" />
     <Compile Include="AnimeCategory_Service.cs" />
+    <Compile Include="AnimeView_Service.cs" />
     <Compile Include="Anime_Service.cs" />
+    <Compile Include="Comment_Service.cs" />
+    <Compile Include="Episode_Service.cs" />
+    <Compile Include="InfoComment_Service.cs" />
+    <Compile Include="InfoEpisode_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubTeam_Service.cs" />
     <Compile Include="Utilities.cs" />
+    <Compile Include="WebView_Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

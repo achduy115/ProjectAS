@@ -21,8 +21,13 @@ namespace ProjectAS.View.Admin.Webform
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            AddSubTeam();
-            LoadSubTeam();
+            AddSubTeam();           
+            LoadSubTeam();         
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
 
         protected void gvSubTeam_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -116,7 +121,7 @@ namespace ProjectAS.View.Admin.Webform
 
                 if (SubTeam_Service.Instance.AddSubTeam(subTeam))
                 {
-                    // Success
+                    Reset();
                 }
                 else
                 {
@@ -125,10 +130,22 @@ namespace ProjectAS.View.Admin.Webform
             }
         }
 
+        private void Reset()
+        {
+            txbID.Text = "";
+            txbID.CssClass = "w3-input w3-border";
+            txbID.Attributes.Add("placeholder", "VNS, ZFS, KRT, ...");
+            txbNameDisplay.Text = "";
+            txbNameDisplay.CssClass = "w3-input w3-border";
+            txbNameDisplay.Attributes.Add("placeholder", "Vnsharing, Zing fansub, ...");
+            txbInfo.Text = "";
+            txbInfo.CssClass = "w3-input w3-border";
+            txbInfo.Attributes.Add("placeholder", "Thông tin của nhóm sub");
+        }
 
 
         #endregion
 
-
+        
     }
 }

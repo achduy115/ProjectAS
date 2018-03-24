@@ -20,13 +20,21 @@ namespace BUS
 
         private Anime_Service() { }
 
-        // Load anime list
+        /// <summary>
+        /// Load anime list
+        /// </summary>
+        /// <returns></returns>
         public List<Anime_Model> LoadAnimeList()
         {
             return Anime_Repository.Instance.GetAnimeList();
         }
 
-        // Add a anime - WARNING
+        /// <summary>
+        /// Add a anime - WARNING
+        /// </summary>
+        /// <param name="anime"></param>
+        /// <param name="idAnimeCategory"></param>
+        /// <returns></returns>
         public bool AddAnime(Anime_Model anime, string idAnimeCategory)
         {
             if (Anime_Repository.Instance.InsertAnime(anime))
@@ -38,7 +46,12 @@ namespace BUS
             return false;
         }
 
-        // Check and load ID
+        /// <summary>
+        /// Check and load ID
+        /// </summary>
+        /// <param name="_season"></param>
+        /// <param name="_year"></param>
+        /// <returns></returns>
         public string LoadID(string _season, string _year)
         {
             string _id = "000";
@@ -77,7 +90,11 @@ namespace BUS
             }
         }
 
-        // Delete a anime - WARNNING - Chưa xóa rằng buộc
+        /// <summary>
+        /// Delete a anime - WARNNING - Chưa xóa rằng buộc
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool DeleteAnime(string id) //
         {
             if (AnimeCategory_Anime_Repository.Instance.DeleteAnimeCategory_AnimeByAnimeID(id))
@@ -94,7 +111,11 @@ namespace BUS
             return false;
         }
 
-        // Update a anime - WARNING
+        /// <summary>
+        /// Update a anime - WARNING
+        /// </summary>
+        /// <param name="anime"></param>
+        /// <returns></returns>
         public bool UpdateAnime(Anime_Model anime)
         {
             if (Anime_Repository.Instance.UpdateAnimeByID(anime))
@@ -107,6 +128,31 @@ namespace BUS
             }
         }
 
+        /// <summary>
+        /// Load top number anime
+        /// </summary>
+        /// <returns></returns>
+        public List<Anime_Model> LoadTopAnimeList(int number)
+        {
+            return Anime_Repository.Instance.GetTopAnimeList(number);
+        }
+
+        /// <summary>
+        /// Load top number anime and group by id
+        /// </summary>
+        /// <param name="id">Group by Id</param>
+        /// <param name="number">The number get</param>
+        /// <param name="something">Something else</param>
+        /// <returns></returns>
+        public List<Anime_Model> LoadTopAnimeListGroupByID(int number, string something = "")
+        {
+            return Anime_Repository.Instance.GetAnimeListOrderByID(number, something);
+        }
+
+        public Anime_Model LoadAnimeByID(string id)
+        {
+            return Anime_Repository.Instance.GetAnimeByID(id);
+        }
 
     }
 }

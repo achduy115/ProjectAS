@@ -20,7 +20,10 @@ namespace DAO
 
         private Anime_Repository() { }
 
-        // Get list anime from database
+        /// <summary>
+        /// Get list anime from database
+        /// </summary>
+        /// <returns></returns>
         public List<Anime_Model> GetAnimeList()
         {
             List<Anime_Model> list = new List<Anime_Model>();
@@ -37,14 +40,17 @@ namespace DAO
             return list;
         }
 
-        // Get Only ID from DB
+        /// <summary>
+        /// Get Only ID from DB
+        /// </summary>
+        /// <returns></returns>
         public List<string> GetAnimeIDList()
         {
             List<string> list = new List<string>();
 
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ID FROM dbo.table_Anime");
 
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 list.Add(item["id"].ToString());
             }
@@ -52,7 +58,11 @@ namespace DAO
             return list;
         }
 
-        // Insert a anime into database
+        /// <summary>
+        /// Insert a anime into database
+        /// </summary>
+        /// <param name="anime"></param>
+        /// <returns></returns>
         public bool InsertAnime(Anime_Model anime)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertAnime @ID , @NameDisplay , @ImageUrl , @Content",
@@ -60,7 +70,11 @@ namespace DAO
             return result > 0;
         }
 
-        // Update a anime 
+        /// <summary>
+        /// Update a anime
+        /// </summary>
+        /// <param name="anime"></param>
+        /// <returns></returns>        
         public bool UpdateAnimeByID(Anime_Model anime)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_UpdateAnime @ID , @NameDisplay , @ImageUrl , @Content , @CurrentEpisode , @MaxEpisode",
@@ -68,13 +82,74 @@ namespace DAO
             return result > 0;
         }
 
-        // Delete a anime
+        /// <summary>
+        /// Delete a anime
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool DeleteAnimeByID(string id)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("USP_DeleteAnime @ID", 
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_DeleteAnime @ID",
                 new object[] { id });
             return result > 0;
         }
+
+        /// <summary>
+        /// Get list anime order by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="number">Number get</param>
+        /// <returns></returns>
+        public List<Anime_Model> GetAnimeListOrderByID(int number, string something = "")
+        {
+            List<Anime_Model> list = new List<Anime_Model>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT TOP " + number + " * FROM [table_Anime] ORDER BY [ID] " + something );
+
+            foreach(DataRow item in data.Rows)
+            {
+                Anime_Model anime = new Anime_Model(item);
+
+                list.Add(anime);
+            }
+
+            return list;
+        }
+
+        /// <summary>
+        /// Get top anime follow the number
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public List<Anime_Model> GetTopAnimeList(int number)
+        {
+            List<Anime_Model> list = new List<Anime_Model>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT TOP " + number + " * FROM table_Anime");
+
+            foreach (DataRow item in data.Rows)
+            {
+                Anime_Model anime = new Anime_Model(item);
+
+                list.Add(anime);
+            }
+
+            return list;
+        }
+
+        /// <summary>
+        /// Get a anime by id and return Anime_Model
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Anime_Model GetAnimeByID(string id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.table_Anime WHERE ID = '" + id + "'");
+
+            return new Anime_Model(data.Rows[0]);          
+        }
+
+
 
     }
 }
