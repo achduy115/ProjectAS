@@ -119,6 +119,7 @@ CREATE TABLE table_Comment --
 	-- Table info
 	ID INT PRIMARY KEY IDENTITY, -- ID comment
 	IDAnime VARCHAR(8) -- ID của anime mà ng dùng comment
+
 	-- Foreign
 	FOREIGN KEY (IDAnime)
 		REFERENCES table_Anime (ID)
@@ -134,6 +135,7 @@ CREATE TABLE table_InfoComment --
 	IDAccountUser INT NOT NULL, -- ID của ng dùng
 	Info NVARCHAR(500) NOT NULL DEFAULT N'Không có thông tin.', -- Nôi dung comment
 	Checked BIT DEFAULT 0 -- Check để biết comment này admin đã đọc chưa
+
 	-- Foreign
 	FOREIGN KEY (IDAccountUser)
 		REFERENCES table_AccountUser(ID)
@@ -149,6 +151,7 @@ CREATE TABLE table_AnimeView --
 	WeekView INT NOT NULL DEFAULT 0, -- số lượng view theo tuần
 	MonthView INT NOT NULL DEFAULT 0, -- số lượng vuew theo tháng
 	TotalView INT NOT NULL DEFAULT 0, -- tống số lượng của tất cả view
+	
 	--- Foreign
 	FOREIGN KEY (IDAnime)
 		REFERENCES table_Anime (ID)

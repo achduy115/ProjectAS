@@ -18,6 +18,5 @@ namespace DAO
 
         private AccountAdmin_Repository() { }
 
-        //
     }
 }

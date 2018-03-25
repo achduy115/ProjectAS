@@ -131,10 +131,10 @@
             <!-- Datalist Episode -->
             <div style="margin: 0px 10px 40px 10px">
                 <asp:DataList ID="dlEpisode" runat="server" Width="100%" CellPadding="4" ForeColor="#333333">
-                    <AlternatingItemStyle BackColor="White" ForeColor="#284775" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <ItemStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <AlternatingItemStyle BackColor="White" />
+                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle BackColor="#E3EAEB" />
                     <ItemTemplate>
                         <div class="w3-row w3-large">
                             <!-- ID Episode  -->
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                     </ItemTemplate>
-                    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                 </asp:DataList>
             </div>
         </section>

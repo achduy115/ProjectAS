@@ -18,7 +18,7 @@ namespace ProjectAS.View.Admin.Webform
             if (!IsPostBack)
             {
                 GetID();
-                LoadHeader();
+                Load();
             }
             else
             {
@@ -28,9 +28,53 @@ namespace ProjectAS.View.Admin.Webform
 
         #region Events
 
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(txbNameDisplay.Text == "" || txbVideUrl.Text == "")
+            {
+                if(txbNameDisplay.Text == "")
+                {
+                    txbNameDisplay.CssClass = "w3-input w3-border w3-border-red w3-pale-red";
+                    txbNameDisplay.Attributes.Add("placeholder","Xin hãy nhập tên tập phim. VD: 01, 02, OVA, SPC.");
+                }
+                if (txbVideUrl.Text == "")
+                {
+                    txbVideUrl.CssClass = "w3-input w3-border w3-border-red w3-pale-red";
+                    txbVideUrl.Attributes.Add("placeholder", "Xin hãy nhập đường dẫn đến video.");
+                }
+            }
+            else
+            {
+                if (AddInfoEpisde())
+                {
+                    // Success
+                }
+                else
+                {
+                    // Error
+                }
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            txbNameDisplay.Text = "";
+            txbNameDisplay.CssClass = "w3-input w3-border";
+            txbNameDisplay.Attributes.Add("placeholder", "01, 02, OVA, SPC");
+            txbVideUrl.Text = "";
+            txbVideUrl.CssClass = "w3-input w3-border";
+            txbVideUrl.Attributes.Add("placeholder", "Đường dẫn đến video url");
+        }
+
         #endregion
 
         #region Methods
+
+        private void Load()
+        {
+            LoadHeader();
+            LoadIdInfoEpisode();
+        }
 
         private void GetID()
         {
@@ -52,8 +96,18 @@ namespace ProjectAS.View.Admin.Webform
             
         }
 
+        private bool AddInfoEpisde()
+        {
+            return false;
+        }
+
+        private void LoadIdInfoEpisode()
+        {
+            txbID.Text = InfoEpisode_Service.Instance.CheckIdInfoEpisode(idEpisode);
+        }
 
         #endregion
 
+        
     }
 }

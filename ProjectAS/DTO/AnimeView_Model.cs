@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +26,13 @@ namespace DTO
             this.TotalView = totalView;
         }
 
+        public AnimeView_Model(DataRow rows)
+        {
+            this.IDAnime = rows["id"].ToString();
+            this.DayView = int.Parse(rows["dayView"].ToString());
+            this.WeekView = int.Parse(rows["weekView"].ToString());
+            this.MonthView = int.Parse(rows["monthView"].ToString());
+            this.TotalView = int.Parse(rows["totalView"].ToString());
+        }
     }
 }
